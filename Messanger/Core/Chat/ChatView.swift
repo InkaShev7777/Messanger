@@ -28,10 +28,15 @@ struct ChatView: View {
                             .foregroundStyle(Color(.systemGray))
                     }
                 }
+                
                 //messages
                 
+                ForEach(0 ... 8, id: \.self) { message in
+                    ChatMessageCell(isFromCurrentUser: Bool.random())
+                }
             }
             //message imput view
+            
             Spacer()
             
             ZStack(alignment: .trailing) {
