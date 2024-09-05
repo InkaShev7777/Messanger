@@ -19,6 +19,7 @@
 		C1CE03BA2C89FE6B00078E9E /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CE03B92C89FE6B00078E9E /* NewMessageView.swift */; };
 		C1CE03BD2C8A037800078E9E /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CE03BC2C8A037800078E9E /* ProfileView.swift */; };
 		C1CE03C12C8A05C100078E9E /* SettingsOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CE03C02C8A05C100078E9E /* SettingsOptionsViewModel.swift */; };
+		C1CE03C32C8A09BB00078E9E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1CE03C22C8A09BB00078E9E /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		C1CE03B92C89FE6B00078E9E /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		C1CE03BC2C8A037800078E9E /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		C1CE03C02C8A05C100078E9E /* SettingsOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewModel.swift; sourceTree = "<group>"; };
+		C1CE03C22C8A09BB00078E9E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				C1CE03C02C8A05C100078E9E /* SettingsOptionsViewModel.swift */,
+				C1CE03C22C8A09BB00078E9E /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				C1CE03C12C8A05C100078E9E /* SettingsOptionsViewModel.swift in Sources */,
 				C16344462C89D9420042970D /* InboxView.swift in Sources */,
 				C16344272C89D5F20042970D /* ContentView.swift in Sources */,
+				C1CE03C32C8A09BB00078E9E /* ProfileViewModel.swift in Sources */,
 				C16344252C89D5F20042970D /* MessangerApp.swift in Sources */,
 				C16344432C89D9030042970D /* ActiveNowView.swift in Sources */,
 				C163443D2C89D8040042970D /* RegistrationView.swift in Sources */,

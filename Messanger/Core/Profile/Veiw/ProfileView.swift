@@ -6,16 +6,28 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ProfileView: View {
+    @StateObject var viewModel = ProfileViewModel()
     var body: some View {
         VStack {
             // heaer
             VStack {
-                Image(systemName: "person.circle.fill")
-                    .resizable()
-                    .frame(width: 80, height: 80)
-                    .foregroundStyle(Color(.systemGray4))
+                PhotosPicker(selection: $viewModel.selectedItem) {
+                    if let profileImage = viewModel.profileImage {
+                        profileImage
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                            .foregroundStyle(Color(.systemGray4))
+                            .clipShape(Circle())
+                    } else {
+                        Image(systemName: "person.circle.fill")
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                            .foregroundStyle(Color(.systemGray4))
+                    }
+                }
                 
                 Text("Ilya Shevchenko")
                     .font(.title2)
