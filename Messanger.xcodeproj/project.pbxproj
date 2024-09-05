@@ -13,6 +13,7 @@
 		C163442C2C89D5F30042970D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C163442B2C89D5F30042970D /* Preview Assets.xcassets */; };
 		C163443B2C89D6B20042970D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C163443A2C89D6B20042970D /* LoginView.swift */; };
 		C163443D2C89D8040042970D /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C163443C2C89D8040042970D /* RegistrationView.swift */; };
+		C16344432C89D9030042970D /* ActiveNowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16344422C89D9030042970D /* ActiveNowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C163442B2C89D5F30042970D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C163443A2C89D6B20042970D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		C163443C2C89D8040042970D /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		C16344422C89D9030042970D /* ActiveNowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveNowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		C16344342C89D63F0042970D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C16344412C89D8F40042970D /* ActiveNow */,
 				C16344362C89D66D0042970D /* Authentication */,
 				C16344352C89D6630042970D /* Root */,
 			);
@@ -135,6 +138,14 @@
 				C163443C2C89D8040042970D /* RegistrationView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C16344412C89D8F40042970D /* ActiveNow */ = {
+			isa = PBXGroup;
+			children = (
+				C16344422C89D9030042970D /* ActiveNowView.swift */,
+			);
+			path = ActiveNow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 				C163443B2C89D6B20042970D /* LoginView.swift in Sources */,
 				C16344272C89D5F20042970D /* ContentView.swift in Sources */,
 				C16344252C89D5F20042970D /* MessangerApp.swift in Sources */,
+				C16344432C89D9030042970D /* ActiveNowView.swift in Sources */,
 				C163443D2C89D8040042970D /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
