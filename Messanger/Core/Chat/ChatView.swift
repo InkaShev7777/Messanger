@@ -50,6 +50,7 @@ struct ChatView: View {
                     
                 
                 Button {
+                    // send message
                     
                 } label: {
                      Text("Send")
