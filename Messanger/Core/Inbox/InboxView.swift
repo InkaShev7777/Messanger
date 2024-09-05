@@ -13,17 +13,17 @@ struct InboxView: View {
     
     var body: some View {
         NavigationStack {
+            ActiveNowView()
             ScrollView {
-                ActiveNowView()
-                
                 List {
-                    ForEach(0 ... 10, id: \.self) { message in
+                    ForEach(0 ... 20, id: \.self) { message in
                         InboxRowView()
                     }
                 }
                 .listStyle(PlainListStyle())
-                .frame(height: UIScreen.main.bounds.height - 120)
+                .frame(height: UIScreen.main.bounds.height - 200)
             }
+            .scrollDisabled(true)
             .navigationDestination(for: User.self, destination: { user in
                 ProfileView(user: user)
             })
