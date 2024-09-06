@@ -22,6 +22,5 @@ class UserService {
         let snaphot = try await Firestore.firestore().collection("users").document(uid).getDocument()
         let user = try snaphot.data(as: User.self)
         self.currentUser = user
-        print("DEBUG: Current user is \(currentUser)")
     }
 }
