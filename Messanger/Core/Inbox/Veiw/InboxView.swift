@@ -9,26 +9,40 @@ import SwiftUI
 
 struct InboxView: View {
     @State private var showNewMessageView = false
-    @State private var user = User.MOCK_USER
+    @State private var selectedUser: User?
+    @State private var showChat = false
+    @StateObject var viewModel = InboxViewModel()
+    
+    private var user: User? {
+        return viewModel.currentUser
+    }
     
     var body: some View {
         NavigationStack {
+            ActiveNowView()
             ScrollView {
-                ActiveNowView()
-                
                 List {
                     ForEach(0 ... 10, id: \.self) { message in
                         InboxRowView()
                     }
                 }
                 .listStyle(PlainListStyle())
-                .frame(height: UIScreen.main.bounds.height - 120)
+                .frame(height: UIScreen.main.bounds.height - 220)
             }
+            .onChange(of: selectedUser, perform: { newValue in
+                showChat = newValue != nil
+            })
+            .scrollDisabled(true)
             .navigationDestination(for: User.self, destination: { user in
                 ProfileView(user: user)
             })
+            .navigationDestination(isPresented: $showChat, destination: {
+                if let user = selectedUser {
+                    ChatView(user: user)
+                }
+            })
             .fullScreenCover(isPresented: $showNewMessageView, content: {
-                NewMessageView()
+                NewMessageView(selectedUser: $selectedUser)
             })
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
