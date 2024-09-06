@@ -15,6 +15,7 @@ class NewMessageViewModel: ObservableObject {
         Task { try await fetchUsers() }
     }
     
+    @MainActor
     func fetchUsers() async throws {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         let users = try await UserService.fetchAllUsers()
