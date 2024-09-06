@@ -19,11 +19,23 @@ struct InboxView: View {
     
     var body: some View {
         NavigationStack {
-            ActiveNowView()
             ScrollView {
                 List {
+                    ActiveNowView()
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(EdgeInsets())
+                        .padding(.vertical)
+                        .padding(.horizontal, 4)
+                    
                     ForEach(viewModel.recentMesages) { message in
-                        InboxRowView(message: message)
+                        ZStack {
+                            NavigationLink(value: message) {
+                                EmptyView()
+                            }
+                            .opacity(0.0)
+                            
+                            InboxRowView(message: message)
+                        }
                     }
                 }
                 .listStyle(PlainListStyle())
@@ -31,6 +43,11 @@ struct InboxView: View {
             }
             .onChange(of: selectedUser, perform: { newValue in
                 showChat = newValue != nil
+            })
+            .navigationDestination(for: Message.self, destination: { message in
+                if let user = message.user {
+                    ChatView(user: user)
+                }
             })
             .scrollDisabled(true)
             .navigationDestination(for: User.self, destination: { user in
